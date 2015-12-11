@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 // View Controllers
-#import "ProfilePageViewController.h"\
+#import "ProfilePageViewController.h"
 
 // Helpers
 #import <QuartzCore/QuartzCore.h>

@@ -14,10 +14,13 @@
 
 #import "MerchantInfoViewController.h"
 
+// Helpers
+#import <QuartzCore/QuartzCore.h>
 
 @interface MerchantSERPViewController () <MDCSwipeToChooseDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UIButton *finishedButton;
 
 @end
 
@@ -28,32 +31,13 @@
     [super viewDidLoad];
     
     self.title = @"";
+    
+    self.finishedButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.finishedButton.layer.borderWidth = 1.0;
+    self.finishedButton.layer.cornerRadius = 20.0;
 
     [self addAnewCard];
-    
-//    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
-//    options.delegate = self;
-//    options.likedText = @"";
-//    options.likedColor = [UIColor clearColor];
-//    options.nopeColor = [UIColor clearColor];
-//    options.nopeText = @"";
-//    options.onPan = ^(MDCPanState *state){
-//        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft)
-//        {
-//            NSLog(@"Let go now to delete the photo!");
-//            // Add another card
-//        }
-//    };
-//    
-//    MerchantCardView *view = [[MerchantCardView alloc] initWithFrame:self.cardView.bounds
-//                                                                     options:options];
-//   // view.backgroundColor = [UIColor blueColor];
-//    
-//    
-//    //view.imageView.image = [UIImage imageNamed:@"photo"];
-//    [self.cardView addSubview:view];
 }
-
 
 #pragma mark - Add new card
 - (void)addAnewCard
