@@ -14,5 +14,7 @@
 @interface MerchantCardView : MDCSwipeToChooseView
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UILabel *merchantNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *merchantAddressLabel;
 
 @end

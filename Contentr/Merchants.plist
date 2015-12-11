@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>merchantName</key>
+		<string>Cafe Cantina</string>
+		<key>merchantAddress</key>
+		<string>1880 Rue Centre</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Cuisine Masala</string>
+		<key>merchantAddress</key>
+		<string>1906 rue du Centre</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Restaurant Les Sottises</string>
+		<key>merchantAddress</key>
+		<string>1777 rue du Centre</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Restaurant Café America</string>
+		<key>merchantAddress</key>
+		<string>20 rue des Seigneurs</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Restaurant La Fantome</string>
+		<key>merchantAddress</key>
+		<string>1832 rue William</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Arem</string>
+		<key>merchantAddress</key>
+		<string>1619B rue William</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Le Richmond Restaurant</string>
+		<key>merchantAddress</key>
+		<string>377 rue Richmond</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Spanel</string>
+		<key>merchantAddress</key>
+		<string>1960 rue Notre-Dame O</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Junior</string>
+		<key>merchantAddress</key>
+		<string>1964 rue Notre-Dame Ouest</string>
+	</dict>
+	<dict>
+		<key>merchantName</key>
+		<string>Chez Sophie Montreal</string>
+		<key>merchantAddress</key>
+		<string>1947 rue Notre-Dame Ouest</string>
+	</dict>
+</array>
+</plist>

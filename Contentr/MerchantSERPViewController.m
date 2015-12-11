@@ -36,47 +36,40 @@
 {
     [super viewDidLoad];
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Merchants" ofType:@"plist"];
+    NSArray *merchants = [[NSArray alloc] initWithContentsOfFile:path];
+    self.cardList = [[NSMutableArray alloc] initWithArray:merchants];
+    
     self.title = @"";
     
     self.finishedButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.finishedButton.layer.borderWidth = 1.0;
     self.finishedButton.layer.cornerRadius = 20.0;
     
-    [self addAnewCard];
+    [self addCardToTop];
     [self addSecondCard];
 }
 
 #pragma mark - Add new card
-- (void)addAnewCard
+- (void)addCardToTop
 {
-    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
-    options.delegate = self;
-    options.threshold = 50.f;
-    options.likedText = @"";
-    options.likedColor = [UIColor clearColor];
-    options.nopeColor = [UIColor clearColor];
-    options.nopeText = @"";
-    options.onPan = ^(MDCPanState *state){
-        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft)
-        {
-            NSLog(@"Let go now to delete the photo!");
-        }
-        
-        
-        
-    };
-    
-    MerchantCardView *view = [[MerchantCardView alloc] initWithFrame:self.cardView.bounds
-                                                             options:options];
-    
-    [view.button addTarget:self action:@selector(didSelectCard) forControlEvents:UIControlEventTouchUpInside];
-    
-    //view.imageView.image = [UIImage imageNamed:@"photo"];
+    MerchantCardView *view = [self fetchCardUsingMerchant];
+    self.firstCard = view;
     [self.cardView addSubview:view];
 }
 
 - (void)addSecondCard
 {
+    MerchantCardView *view = [self fetchCardUsingMerchant];
+    self.secondCard = view;
+    [self.secondCardView addSubview:view];
+}
+
+- (MerchantCardView *)fetchCardUsingMerchant
+{
+    NSDictionary *merchant = [self.cardList firstObject];
+    [self.cardList removeObject:merchant];
+    
     MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
     options.threshold = 50.f;
     options.delegate = self;
@@ -88,6 +81,9 @@
         if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft)
         {
             NSLog(@"Let go now to delete the photo!");
+            NSLog(@"First card:%@",self.firstCard.merchantNameLabel.text);
+            NSLog(@"Second card:%@", self.secondCard.merchantNameLabel.text);
+            
         }
         
         
@@ -99,8 +95,10 @@
     
     [view.button addTarget:self action:@selector(didSelectCard) forControlEvents:UIControlEventTouchUpInside];
     
-    //view.imageView.image = [UIImage imageNamed:@"photo"];
-    [self.secondCardView addSubview:view];
+    view.merchantNameLabel.text = merchant[@"merchantName"];
+    view.merchantAddressLabel.text = merchant[@"merchantAddress"];
+    
+    return view;
 }
 
 - (void)updateCards
@@ -132,11 +130,8 @@
 }
 
 // This is called then a user swipes the view fully left or right.
-- (void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction {
-    
-    [self addAnewCard];
-    
-    
+- (void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction
+{
     [self updateCards];
     
     if (direction == MDCSwipeDirectionLeft) {

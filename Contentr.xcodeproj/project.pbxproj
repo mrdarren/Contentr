@@ -27,6 +27,7 @@
 		969836881C1B49950044ACFC /* MerchantInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969836861C1B49950044ACFC /* MerchantInfoViewController.m */; };
 		969836891C1B49950044ACFC /* MerchantInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969836871C1B49950044ACFC /* MerchantInfoViewController.xib */; };
 		9698368B1C1B4A6D0044ACFC /* Question.png in Resources */ = {isa = PBXBuildFile; fileRef = 9698368A1C1B4A6D0044ACFC /* Question.png */; };
+		9698368E1C1B6B9C0044ACFC /* Merchants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9698368D1C1B6B9C0044ACFC /* Merchants.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		969836861C1B49950044ACFC /* MerchantInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoViewController.m; sourceTree = "<group>"; };
 		969836871C1B49950044ACFC /* MerchantInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantInfoViewController.xib; sourceTree = "<group>"; };
 		9698368A1C1B4A6D0044ACFC /* Question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Question.png; path = Contentr/Question.png; sourceTree = "<group>"; };
+		9698368D1C1B6B9C0044ACFC /* Merchants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Merchants.plist; path = Contentr/Merchants.plist; sourceTree = "<group>"; };
 		E63C1260AFA7280DF98D02BC /* libPods-Contentr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Contentr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -231,6 +233,7 @@
 			children = (
 				9698367C1C1B3FD40044ACFC /* Home.png */,
 				9698368A1C1B4A6D0044ACFC /* Question.png */,
+				9698368D1C1B6B9C0044ACFC /* Merchants.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				969836891C1B49950044ACFC /* MerchantInfoViewController.xib in Resources */,
 				9698367A1C1B3E5F0044ACFC /* ProfilePageViewController.xib in Resources */,
 				969836821C1B444A0044ACFC /* MerchantCardView.xib in Resources */,
+				9698368E1C1B6B9C0044ACFC /* Merchants.plist in Resources */,
 				969836431C1B22110044ACFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
