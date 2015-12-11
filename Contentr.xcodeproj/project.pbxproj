@@ -19,6 +19,9 @@
 		969836611C1B22110044ACFC /* ContentrUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 969836601C1B22110044ACFC /* ContentrUITests.m */; };
 		969836731C1B23BF0044ACFC /* MerchantSERPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969836711C1B23BF0044ACFC /* MerchantSERPViewController.m */; };
 		969836741C1B23BF0044ACFC /* MerchantSERPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969836721C1B23BF0044ACFC /* MerchantSERPViewController.xib */; };
+		969836791C1B3E5F0044ACFC /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969836771C1B3E5F0044ACFC /* ProfilePageViewController.m */; };
+		9698367A1C1B3E5F0044ACFC /* ProfilePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969836781C1B3E5F0044ACFC /* ProfilePageViewController.xib */; };
+		9698367D1C1B3FD40044ACFC /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9698367C1C1B3FD40044ACFC /* Home.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,10 @@
 		969836701C1B23BF0044ACFC /* MerchantSERPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantSERPViewController.h; sourceTree = "<group>"; };
 		969836711C1B23BF0044ACFC /* MerchantSERPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantSERPViewController.m; sourceTree = "<group>"; };
 		969836721C1B23BF0044ACFC /* MerchantSERPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantSERPViewController.xib; sourceTree = "<group>"; };
+		969836761C1B3E5F0044ACFC /* ProfilePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageViewController.h; sourceTree = "<group>"; };
+		969836771C1B3E5F0044ACFC /* ProfilePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageViewController.m; sourceTree = "<group>"; };
+		969836781C1B3E5F0044ACFC /* ProfilePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePageViewController.xib; sourceTree = "<group>"; };
+		9698367C1C1B3FD40044ACFC /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home.png; path = Contentr/Home.png; sourceTree = "<group>"; };
 		E63C1260AFA7280DF98D02BC /* libPods-Contentr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Contentr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +117,7 @@
 		9698362C1C1B22110044ACFC = {
 			isa = PBXGroup;
 			children = (
+				9698367B1C1B3FC50044ACFC /* Resources */,
 				969836371C1B22110044ACFC /* Contentr */,
 				969836541C1B22110044ACFC /* ContentrTests */,
 				9698365F1C1B22110044ACFC /* ContentrUITests */,
@@ -132,6 +140,7 @@
 		969836371C1B22110044ACFC /* Contentr */ = {
 			isa = PBXGroup;
 			children = (
+				969836751C1B3E0D0044ACFC /* Profile Page */,
 				9698366F1C1B23830044ACFC /* Merchants SERP */,
 				9698366E1C1B22820044ACFC /* Login */,
 				9698363B1C1B22110044ACFC /* AppDelegate.h */,
@@ -189,6 +198,24 @@
 				969836721C1B23BF0044ACFC /* MerchantSERPViewController.xib */,
 			);
 			name = "Merchants SERP";
+			sourceTree = "<group>";
+		};
+		969836751C1B3E0D0044ACFC /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				969836761C1B3E5F0044ACFC /* ProfilePageViewController.h */,
+				969836771C1B3E5F0044ACFC /* ProfilePageViewController.m */,
+				969836781C1B3E5F0044ACFC /* ProfilePageViewController.xib */,
+			);
+			name = "Profile Page";
+			sourceTree = "<group>";
+		};
+		9698367B1C1B3FC50044ACFC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9698367C1C1B3FD40044ACFC /* Home.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +324,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9698367D1C1B3FD40044ACFC /* Home.png in Resources */,
 				9698364B1C1B22110044ACFC /* LaunchScreen.storyboard in Resources */,
 				969836481C1B22110044ACFC /* Assets.xcassets in Resources */,
 				969836741C1B23BF0044ACFC /* MerchantSERPViewController.xib in Resources */,
+				9698367A1C1B3E5F0044ACFC /* ProfilePageViewController.xib in Resources */,
 				969836431C1B22110044ACFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +405,7 @@
 				969836401C1B22110044ACFC /* ViewController.m in Sources */,
 				9698363D1C1B22110044ACFC /* AppDelegate.m in Sources */,
 				969836461C1B22110044ACFC /* Contentr.xcdatamodeld in Sources */,
+				969836791C1B3E5F0044ACFC /* ProfilePageViewController.m in Sources */,
 				969836731C1B23BF0044ACFC /* MerchantSERPViewController.m in Sources */,
 				9698363A1C1B22110044ACFC /* main.m in Sources */,
 			);
