@@ -8,30 +8,39 @@
 
 #import "MerchantSERPViewController.h"
 
+#import <MDCSwipeToChoose/MDCSwipeToChoose.h>
+
+
 @interface MerchantSERPViewController ()
+
+@property (weak, nonatomic) IBOutlet UIView *cardView;
 
 @end
 
 @implementation MerchantSERPViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
+    options.likedText = @"";
+    options.likedColor = [UIColor clearColor];
+    options.nopeColor = [UIColor clearColor];
+    options.nopeText = @"";
+    options.onPan = ^(MDCPanState *state){
+        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft) {
+            NSLog(@"Let go now to delete the photo!");
+        }
+    };
+    
+    MDCSwipeToChooseView *view = [[MDCSwipeToChooseView alloc] initWithFrame:self.cardView.bounds
+                                                                     options:options];
+    //view.imageView.image = [UIImage imageNamed:@"photo"];
+    [self.cardView addSubview:view];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

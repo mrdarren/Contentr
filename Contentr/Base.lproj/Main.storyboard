@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -34,8 +35,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0M-9J-wB9">
-                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-KH-7kV" userLabel="Name Text Field">
+                                <rect key="frame" x="40" y="235" width="520" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13q-oE-yp9">
+                                <rect key="frame" x="40" y="285" width="520" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0M-9J-wB9" userLabel="Password Text Field">
+                                <rect key="frame" x="281" y="335" width="38" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -44,11 +57,27 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W0M-9J-wB9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vEh-Cl-AkP"/>
-                            <constraint firstItem="W0M-9J-wB9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y7G-NT-XVw"/>
+                            <constraint firstItem="13q-oE-yp9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="2BJ-g3-dv7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qLk-KH-7kV" secondAttribute="trailing" constant="20" id="6BK-9L-S2c"/>
+                            <constraint firstItem="qLk-KH-7kV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="7dN-YR-TFQ"/>
+                            <constraint firstItem="13q-oE-yp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E3n-OA-YDQ"/>
+                            <constraint firstItem="W0M-9J-wB9" firstAttribute="top" secondItem="13q-oE-yp9" secondAttribute="top" id="G1d-d5-VQx"/>
+                            <constraint firstItem="W0M-9J-wB9" firstAttribute="top" secondItem="13q-oE-yp9" secondAttribute="bottom" constant="20" id="M7D-nR-bXy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="13q-oE-yp9" secondAttribute="trailing" constant="20" id="bWO-uz-c21"/>
+                            <constraint firstItem="qLk-KH-7kV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fw7-Ff-ZGO"/>
+                            <constraint firstItem="13q-oE-yp9" firstAttribute="top" secondItem="qLk-KH-7kV" secondAttribute="bottom" constant="20" id="ik0-ex-3pg"/>
+                            <constraint firstItem="qLk-KH-7kV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="mi8-eo-tFd"/>
+                            <constraint firstItem="13q-oE-yp9" firstAttribute="top" secondItem="qLk-KH-7kV" secondAttribute="top" id="rD3-a8-td0"/>
+                            <constraint firstItem="W0M-9J-wB9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yTF-Mh-7va"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rD3-a8-td0"/>
+                                <exclude reference="G1d-d5-VQx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="kwQ-fH-L5d"/>
                 </viewController>
