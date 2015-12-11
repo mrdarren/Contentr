@@ -16,6 +16,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssP-eH-phE">
+                    <rect key="frame" x="98" y="579" width="181" height="50"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eFt-wl-nVe"/>
+                    </constraints>
+                    <connections>
+                        <action selector="startButtonSelected:" destination="-1" eventType="touchUpInside" id="N4N-0W-MLj"/>
+                    </connections>
+                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home.png" translatesAutoresizingMaskIntoConstraints="NO" id="vns-RA-7MX">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <animations/>
@@ -25,8 +35,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="vns-RA-7MX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DEx-Je-1Yk"/>
+                <constraint firstAttribute="trailing" secondItem="ssP-eH-phE" secondAttribute="trailing" constant="96" id="EYd-WC-jrh"/>
+                <constraint firstAttribute="bottom" secondItem="ssP-eH-phE" secondAttribute="bottom" constant="38" id="IVx-FG-Din"/>
                 <constraint firstAttribute="bottom" secondItem="vns-RA-7MX" secondAttribute="bottom" id="Oia-Jt-Rz1"/>
                 <constraint firstAttribute="trailing" secondItem="vns-RA-7MX" secondAttribute="trailing" id="POJ-Ya-0ga"/>
+                <constraint firstItem="ssP-eH-phE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="98" id="p0M-yF-5a0"/>
                 <constraint firstItem="vns-RA-7MX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qae-wF-3OQ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

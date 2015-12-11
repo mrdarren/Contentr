@@ -10,6 +10,8 @@
 
 #import "MerchantSERPViewController.h"
 
+#import "ProfilePageViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -22,6 +24,8 @@
     [super viewDidLoad];
     
     self.title = @"ContentR";
+    
+    self.navigationController.navigationBar.hidden = YES;
 
 }
 
@@ -32,9 +36,10 @@
 
 - (IBAction)loginButtonSelected:(id)sender
 {
-    MerchantSERPViewController *vc = [[MerchantSERPViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
+    //MerchantSERPViewController *vc = [[MerchantSERPViewController alloc] initWithNibName:nil bundle:nil];
     
+    ProfilePageViewController *vc = [[ProfilePageViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 @end
