@@ -22,6 +22,11 @@
 		969836791C1B3E5F0044ACFC /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969836771C1B3E5F0044ACFC /* ProfilePageViewController.m */; };
 		9698367A1C1B3E5F0044ACFC /* ProfilePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969836781C1B3E5F0044ACFC /* ProfilePageViewController.xib */; };
 		9698367D1C1B3FD40044ACFC /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9698367C1C1B3FD40044ACFC /* Home.png */; };
+		969836801C1B44350044ACFC /* MerchantCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698367F1C1B44350044ACFC /* MerchantCardView.m */; };
+		969836821C1B444A0044ACFC /* MerchantCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969836811C1B444A0044ACFC /* MerchantCardView.xib */; };
+		969836881C1B49950044ACFC /* MerchantInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969836861C1B49950044ACFC /* MerchantInfoViewController.m */; };
+		969836891C1B49950044ACFC /* MerchantInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969836871C1B49950044ACFC /* MerchantInfoViewController.xib */; };
+		9698368B1C1B4A6D0044ACFC /* Question.png in Resources */ = {isa = PBXBuildFile; fileRef = 9698368A1C1B4A6D0044ACFC /* Question.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,13 @@
 		969836771C1B3E5F0044ACFC /* ProfilePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageViewController.m; sourceTree = "<group>"; };
 		969836781C1B3E5F0044ACFC /* ProfilePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePageViewController.xib; sourceTree = "<group>"; };
 		9698367C1C1B3FD40044ACFC /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home.png; path = Contentr/Home.png; sourceTree = "<group>"; };
+		9698367E1C1B44350044ACFC /* MerchantCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCardView.h; sourceTree = "<group>"; };
+		9698367F1C1B44350044ACFC /* MerchantCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCardView.m; sourceTree = "<group>"; };
+		969836811C1B444A0044ACFC /* MerchantCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCardView.xib; sourceTree = "<group>"; };
+		969836851C1B49950044ACFC /* MerchantInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoViewController.h; sourceTree = "<group>"; };
+		969836861C1B49950044ACFC /* MerchantInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoViewController.m; sourceTree = "<group>"; };
+		969836871C1B49950044ACFC /* MerchantInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantInfoViewController.xib; sourceTree = "<group>"; };
+		9698368A1C1B4A6D0044ACFC /* Question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Question.png; path = Contentr/Question.png; sourceTree = "<group>"; };
 		E63C1260AFA7280DF98D02BC /* libPods-Contentr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Contentr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +152,7 @@
 		969836371C1B22110044ACFC /* Contentr */ = {
 			isa = PBXGroup;
 			children = (
+				969836831C1B48EB0044ACFC /* Merchant Rating Page */,
 				969836751C1B3E0D0044ACFC /* Profile Page */,
 				9698366F1C1B23830044ACFC /* Merchants SERP */,
 				9698366E1C1B22820044ACFC /* Login */,
@@ -196,6 +209,9 @@
 				969836701C1B23BF0044ACFC /* MerchantSERPViewController.h */,
 				969836711C1B23BF0044ACFC /* MerchantSERPViewController.m */,
 				969836721C1B23BF0044ACFC /* MerchantSERPViewController.xib */,
+				9698367E1C1B44350044ACFC /* MerchantCardView.h */,
+				9698367F1C1B44350044ACFC /* MerchantCardView.m */,
+				969836811C1B444A0044ACFC /* MerchantCardView.xib */,
 			);
 			name = "Merchants SERP";
 			sourceTree = "<group>";
@@ -214,8 +230,19 @@
 			isa = PBXGroup;
 			children = (
 				9698367C1C1B3FD40044ACFC /* Home.png */,
+				9698368A1C1B4A6D0044ACFC /* Question.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		969836831C1B48EB0044ACFC /* Merchant Rating Page */ = {
+			isa = PBXGroup;
+			children = (
+				969836851C1B49950044ACFC /* MerchantInfoViewController.h */,
+				969836861C1B49950044ACFC /* MerchantInfoViewController.m */,
+				969836871C1B49950044ACFC /* MerchantInfoViewController.xib */,
+			);
+			name = "Merchant Rating Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +355,10 @@
 				9698364B1C1B22110044ACFC /* LaunchScreen.storyboard in Resources */,
 				969836481C1B22110044ACFC /* Assets.xcassets in Resources */,
 				969836741C1B23BF0044ACFC /* MerchantSERPViewController.xib in Resources */,
+				9698368B1C1B4A6D0044ACFC /* Question.png in Resources */,
+				969836891C1B49950044ACFC /* MerchantInfoViewController.xib in Resources */,
 				9698367A1C1B3E5F0044ACFC /* ProfilePageViewController.xib in Resources */,
+				969836821C1B444A0044ACFC /* MerchantCardView.xib in Resources */,
 				969836431C1B22110044ACFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +434,9 @@
 			files = (
 				969836401C1B22110044ACFC /* ViewController.m in Sources */,
 				9698363D1C1B22110044ACFC /* AppDelegate.m in Sources */,
+				969836801C1B44350044ACFC /* MerchantCardView.m in Sources */,
 				969836461C1B22110044ACFC /* Contentr.xcdatamodeld in Sources */,
+				969836881C1B49950044ACFC /* MerchantInfoViewController.m in Sources */,
 				969836791C1B3E5F0044ACFC /* ProfilePageViewController.m in Sources */,
 				969836731C1B23BF0044ACFC /* MerchantSERPViewController.m in Sources */,
 				9698363A1C1B22110044ACFC /* main.m in Sources */,

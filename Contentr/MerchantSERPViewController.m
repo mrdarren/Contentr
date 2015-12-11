@@ -10,6 +10,10 @@
 
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 
+#import "MerchantCardView.h"
+
+#import "MerchantInfoViewController.h"
+
 
 @interface MerchantSERPViewController () <MDCSwipeToChooseDelegate>
 
@@ -23,27 +27,29 @@
 {
     [super viewDidLoad];
 
-    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
-    options.delegate = self;
-    options.likedText = @"";
-    options.likedColor = [UIColor clearColor];
-    options.nopeColor = [UIColor clearColor];
-    options.nopeText = @"";
-    options.onPan = ^(MDCPanState *state){
-        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft)
-        {
-            NSLog(@"Let go now to delete the photo!");
-            // Add another card
-        }
-    };
+    [self addAnewCard];
     
-    MDCSwipeToChooseView *view = [[MDCSwipeToChooseView alloc] initWithFrame:self.cardView.bounds
-                                                                     options:options];
-    view.backgroundColor = [UIColor blueColor];
-    
-    
-    //view.imageView.image = [UIImage imageNamed:@"photo"];
-    [self.cardView addSubview:view];
+//    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
+//    options.delegate = self;
+//    options.likedText = @"";
+//    options.likedColor = [UIColor clearColor];
+//    options.nopeColor = [UIColor clearColor];
+//    options.nopeText = @"";
+//    options.onPan = ^(MDCPanState *state){
+//        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft)
+//        {
+//            NSLog(@"Let go now to delete the photo!");
+//            // Add another card
+//        }
+//    };
+//    
+//    MerchantCardView *view = [[MerchantCardView alloc] initWithFrame:self.cardView.bounds
+//                                                                     options:options];
+//   // view.backgroundColor = [UIColor blueColor];
+//    
+//    
+//    //view.imageView.image = [UIImage imageNamed:@"photo"];
+//    [self.cardView addSubview:view];
 }
 
 
@@ -67,11 +73,10 @@
         
     };
     
-    MDCSwipeToChooseView *view = [[MDCSwipeToChooseView alloc] initWithFrame:self.cardView.bounds
-                                                                     options:options];
-    view.backgroundColor = [UIColor greenColor];
-
+    MerchantCardView *view = [[MerchantCardView alloc] initWithFrame:self.cardView.bounds
+                                                             options:options];
     
+    [view.button addTarget:self action:@selector(didSelectCard) forControlEvents:UIControlEventTouchUpInside];
     
     //view.imageView.image = [UIImage imageNamed:@"photo"];
     [self.cardView addSubview:view];
@@ -109,6 +114,13 @@
     } else {
         NSLog(@"Photo saved!");
     }
+}
+
+#pragma mark - Actions
+- (void)didSelectCard
+{
+    MerchantInfoViewController *vc = [[MerchantInfoViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
