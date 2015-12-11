@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="cardView" destination="4cF-VY-XZm" id="2e8-Rm-omX"/>
                 <outlet property="finishedButton" destination="4mg-UW-cF8" id="e6q-kk-7FM"/>
+                <outlet property="secondCardView" destination="IYF-IN-QUt" id="wG6-Qx-OW3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,10 +18,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cF-VY-XZm" userLabel="Card View">
-                    <rect key="frame" x="67" y="90" width="240" height="300"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYF-IN-QUt" userLabel="Second Card View">
+                    <rect key="frame" x="67" y="184" width="240" height="206"/>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cF-VY-XZm" userLabel="First Card View">
+                    <rect key="frame" x="67" y="184" width="240" height="206"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mg-UW-cF8">
                     <rect key="frame" x="40" y="577" width="295" height="50"/>
@@ -37,17 +44,21 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="4cF-VY-XZm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="CGv-WF-Xpv"/>
+                <constraint firstItem="IYF-IN-QUt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="3Bq-yu-iAr"/>
+                <constraint firstAttribute="bottom" secondItem="IYF-IN-QUt" secondAttribute="bottom" constant="277" id="AcC-8f-NVN"/>
+                <constraint firstItem="4cF-VY-XZm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="184" id="CGv-WF-Xpv"/>
+                <constraint firstItem="IYF-IN-QUt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="184" id="ETA-FA-R08"/>
                 <constraint firstAttribute="trailing" secondItem="4mg-UW-cF8" secondAttribute="trailing" constant="40" id="FkY-Gy-BGn"/>
                 <constraint firstAttribute="bottom" secondItem="4mg-UW-cF8" secondAttribute="bottom" constant="40" id="GMc-6s-YQc"/>
                 <constraint firstAttribute="bottom" secondItem="4cF-VY-XZm" secondAttribute="bottom" constant="277" id="Qlh-5g-e9v"/>
                 <constraint firstItem="4mg-UW-cF8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="cM2-9e-Rxo"/>
                 <constraint firstAttribute="trailing" secondItem="4cF-VY-XZm" secondAttribute="trailing" constant="68" id="cUL-B9-vEv"/>
                 <constraint firstItem="4cF-VY-XZm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="rOf-Dh-xh0"/>
+                <constraint firstAttribute="trailing" secondItem="IYF-IN-QUt" secondAttribute="trailing" constant="68" id="zHL-aQ-Ev9"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="121.5" y="369.5"/>
+            <point key="canvasLocation" x="-145.5" y="416.5"/>
         </view>
     </objects>
 </document>

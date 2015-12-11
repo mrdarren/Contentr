@@ -20,7 +20,13 @@
 @interface MerchantSERPViewController () <MDCSwipeToChooseDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UIView *secondCardView;
 @property (weak, nonatomic) IBOutlet UIButton *finishedButton;
+
+@property (strong, nonatomic) MerchantCardView *firstCard;
+@property (strong, nonatomic) MerchantCardView *secondCard;
+
+@property (strong, nonatomic) NSMutableArray *cardList;
 
 @end
 
@@ -35,16 +41,17 @@
     self.finishedButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.finishedButton.layer.borderWidth = 1.0;
     self.finishedButton.layer.cornerRadius = 20.0;
-
+    
     [self addAnewCard];
+    [self addSecondCard];
 }
 
 #pragma mark - Add new card
 - (void)addAnewCard
 {
-    
     MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
     options.delegate = self;
+    options.threshold = 50.f;
     options.likedText = @"";
     options.likedColor = [UIColor clearColor];
     options.nopeColor = [UIColor clearColor];
@@ -68,6 +75,40 @@
     [self.cardView addSubview:view];
 }
 
+- (void)addSecondCard
+{
+    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
+    options.threshold = 50.f;
+    options.delegate = self;
+    options.likedText = @"";
+    options.likedColor = [UIColor clearColor];
+    options.nopeColor = [UIColor clearColor];
+    options.nopeText = @"";
+    options.onPan = ^(MDCPanState *state){
+        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft)
+        {
+            NSLog(@"Let go now to delete the photo!");
+        }
+        
+        
+        
+    };
+    
+    MerchantCardView *view = [[MerchantCardView alloc] initWithFrame:self.cardView.bounds
+                                                             options:options];
+    
+    [view.button addTarget:self action:@selector(didSelectCard) forControlEvents:UIControlEventTouchUpInside];
+    
+    //view.imageView.image = [UIImage imageNamed:@"photo"];
+    [self.secondCardView addSubview:view];
+}
+
+- (void)updateCards
+{
+    self.firstCard = self.secondCard;
+    [self.cardView addSubview:self.firstCard];
+    [self addSecondCard];
+}
 
 #pragma mark - MDCSwipeToChooseDelegate Callbacks
 // This is called when a user didn't fully swipe left or right.
@@ -94,6 +135,9 @@
 - (void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction {
     
     [self addAnewCard];
+    
+    
+    [self updateCards];
     
     if (direction == MDCSwipeDirectionLeft) {
         NSLog(@"Photo deleted!");
