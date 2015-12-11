@@ -61,6 +61,12 @@
 - (void)addSecondCard
 {
     MerchantCardView *view = [self fetchCardUsingMerchant];
+    
+    if (!view)
+    {
+        return;
+    }
+    
     self.secondCard = view;
     [self.secondCardView addSubview:view];
 }
@@ -148,5 +154,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)finishedButtonSelected:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

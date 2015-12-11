@@ -38,19 +38,22 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-KH-7kV" userLabel="Name Text Field">
                                 <rect key="frame" x="40" y="215" width="520" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13q-oE-yp9">
                                 <rect key="frame" x="40" y="265" width="520" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0M-9J-wB9" userLabel="Password Text Field">
-                                <rect key="frame" x="40" y="315" width="520" height="30"/>
+                                <rect key="frame" x="40" y="315" width="520" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.7725490196" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0eV-Z4-L20"/>
+                                </constraints>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -58,6 +61,13 @@
                                     <action selector="loginButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOW-oj-Wxg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="ContentR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r08-M7-W4M">
+                                <rect key="frame" x="246.5" y="143" width="107.5" height="34.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,8 +80,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="W0M-9J-wB9" secondAttribute="trailing" constant="20" id="Grt-3e-tVN"/>
                             <constraint firstItem="W0M-9J-wB9" firstAttribute="top" secondItem="13q-oE-yp9" secondAttribute="bottom" constant="20" id="M7D-nR-bXy"/>
                             <constraint firstItem="W0M-9J-wB9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="NGE-ml-NOl"/>
+                            <constraint firstItem="r08-M7-W4M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="ZTL-KC-g6z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="13q-oE-yp9" secondAttribute="trailing" constant="20" id="bWO-uz-c21"/>
                             <constraint firstItem="qLk-KH-7kV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fw7-Ff-ZGO"/>
+                            <constraint firstItem="r08-M7-W4M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ibR-zN-3v0"/>
                             <constraint firstItem="13q-oE-yp9" firstAttribute="top" secondItem="qLk-KH-7kV" secondAttribute="bottom" constant="20" id="ik0-ex-3pg"/>
                             <constraint firstItem="qLk-KH-7kV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="mi8-eo-tFd"/>
                             <constraint firstItem="13q-oE-yp9" firstAttribute="top" secondItem="qLk-KH-7kV" secondAttribute="top" id="rD3-a8-td0"/>
