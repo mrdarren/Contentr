@@ -19,13 +19,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <animations/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPj-pl-Cb8">
+                    <rect key="frame" x="100" y="578" width="174" height="50"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="78C-v9-OUs"/>
+                    </constraints>
+                    <connections>
+                        <action selector="submitButtonSelected:" destination="-1" eventType="touchUpInside" id="eYn-GV-K6f"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="NPj-pl-Cb8" secondAttribute="trailing" constant="101" id="HHU-uI-WYB"/>
+                <constraint firstAttribute="bottom" secondItem="NPj-pl-Cb8" secondAttribute="bottom" constant="39" id="KyF-PD-CsJ"/>
                 <constraint firstAttribute="bottom" secondItem="RTA-Ut-0bW" secondAttribute="bottom" id="LRU-ge-1pj"/>
                 <constraint firstItem="RTA-Ut-0bW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RVR-wB-ODg"/>
                 <constraint firstItem="RTA-Ut-0bW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X7U-wR-3q9"/>
+                <constraint firstItem="NPj-pl-Cb8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="ogU-qc-FFZ"/>
                 <constraint firstAttribute="trailing" secondItem="RTA-Ut-0bW" secondAttribute="trailing" id="pWL-mT-rrh"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

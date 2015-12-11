@@ -36,21 +36,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-KH-7kV" userLabel="Name Text Field">
-                                <rect key="frame" x="40" y="235" width="520" height="30"/>
+                                <rect key="frame" x="40" y="215" width="520" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13q-oE-yp9">
-                                <rect key="frame" x="40" y="285" width="520" height="30"/>
+                                <rect key="frame" x="40" y="265" width="520" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0M-9J-wB9" userLabel="Password Text Field">
-                                <rect key="frame" x="281" y="335" width="38" height="30"/>
+                                <rect key="frame" x="40" y="315" width="520" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Login"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.7725490196" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="loginButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOW-oj-Wxg"/>
                                 </connections>
@@ -61,10 +64,12 @@
                         <constraints>
                             <constraint firstItem="13q-oE-yp9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="2BJ-g3-dv7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qLk-KH-7kV" secondAttribute="trailing" constant="20" id="6BK-9L-S2c"/>
-                            <constraint firstItem="qLk-KH-7kV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="7dN-YR-TFQ"/>
+                            <constraint firstItem="qLk-KH-7kV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="7dN-YR-TFQ"/>
                             <constraint firstItem="13q-oE-yp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E3n-OA-YDQ"/>
                             <constraint firstItem="W0M-9J-wB9" firstAttribute="top" secondItem="13q-oE-yp9" secondAttribute="top" id="G1d-d5-VQx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W0M-9J-wB9" secondAttribute="trailing" constant="20" id="Grt-3e-tVN"/>
                             <constraint firstItem="W0M-9J-wB9" firstAttribute="top" secondItem="13q-oE-yp9" secondAttribute="bottom" constant="20" id="M7D-nR-bXy"/>
+                            <constraint firstItem="W0M-9J-wB9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="NGE-ml-NOl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="13q-oE-yp9" secondAttribute="trailing" constant="20" id="bWO-uz-c21"/>
                             <constraint firstItem="qLk-KH-7kV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fw7-Ff-ZGO"/>
                             <constraint firstItem="13q-oE-yp9" firstAttribute="top" secondItem="qLk-KH-7kV" secondAttribute="bottom" constant="20" id="ik0-ex-3pg"/>
@@ -80,6 +85,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="kwQ-fH-L5d"/>
+                    <connections>
+                        <outlet property="loginButton" destination="W0M-9J-wB9" id="HW0-ch-MSD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 
-#import "MerchantSERPViewController.h"
+// View Controllers
+#import "ProfilePageViewController.h"\
 
-#import "ProfilePageViewController.h"
+// Helpers
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @end
 
 @implementation ViewController
@@ -23,10 +26,16 @@
 {
     [super viewDidLoad];
     
-    self.title = @"ContentR";
+    self.title = @"";
     
-    self.navigationController.navigationBar.hidden = YES;
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 
+    self.loginButton.layer.cornerRadius = 5.0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +49,8 @@
     
     ProfilePageViewController *vc = [[ProfilePageViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
-
 }
+
+
+
 @end
